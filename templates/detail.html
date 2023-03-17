@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block main %}
+{% for order in orders %}
+<h1>
+{{order.postal_code}}
+</h1>
+<p>
+
+    {{order.created}}
+</p>
+<p>
+    Payment status
+    {% if order.paid %}
+    paid
+    {% else %}
+    upaid
+    {% endif %}
+</p>
+<p>
+    {{order.address}}
+</p>
+
+
+{% endfor %}
+
+{% endblock main %}
+
+
+
